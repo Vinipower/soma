@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de valores</title>
+</head>
+<body>
+    <script>
+        let acertos = 0;
+        let erros = 0;
+        alert("Sistemas de perguntas de adição (SOMA)");
+        const numPerguntas = prompt("Quantas perguntas quer que o sistema faça?");
+
+        for (let i = 0; i < numPerguntas; i++) {
+            let num1 = Math.floor(Math.random() * 100); 
+            let num2 = Math.floor(Math.random() * 100);
+            
+            let resultado = num1 + num2;
+
+            respostaUsuario = prompt(`Qual o resultado da soma de: ${num1} + ${num2} ?`);
+
+            if (respostaUsuario == resultado) {
+                acertos++;
+            } else{
+                erros++;
+            }
+        }
+        alert(`A quantidade de acertos é de: ${acertos} \nA quantidade de erros é de: ${erros}`);
+    </script>
+</body>
+</html>
